@@ -47,7 +47,30 @@ def funcImgNames (x):
 
 
 # test one image
-plt.imshow(imageio.imread(imgFiles[1])[:,:,1], cmap="plasma")
+image = imageio.imread(imgFiles[1])[:,:,1]
+image = image[0:100, 0:100]
+plt.imshow(image)
 
 import pysal.lib
-from pysal.explore.esda.moran import Moran
+from pysal.explore.esda.moran import Moran_Local
+
+landsize = (100)
+w = pysal.lib.weights.lat2W(landsize/2, landsize/2)
+some_moran = Moran_Local(image, w, permutations=3)
+
+# now reshape
+some_moran = np.array(some_moran.Is).reshape(100, 100)
+x = np.arange(0, 100)
+y = x
+x, y = np.meshgrid(x, y)
+
+from mpl_toolkits import mplot3d
+ax = plt.axes(projection='3d')
+ax.plot_surface(x, y, some_moran, rstride=1, cstride=1,
+                cmap='viridis', edgecolor='none')
+ax.set_title('surface')
+
+plt.imshow(some_moran, cmap="viridis")
+plt.savefig("figs/fig_example_moran_local.png")
+
+# ends here
