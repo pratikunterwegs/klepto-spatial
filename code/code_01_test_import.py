@@ -8,12 +8,10 @@ import sys
 for p in sys.path:
     print(p)
 
-import pandas as pd  # similar to dplyr! yay!
 import os  # has list dir functions etc
 import numpy as np  # some matrix functions
 import imageio
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 
 # check the current working directory
 os.getcwd()

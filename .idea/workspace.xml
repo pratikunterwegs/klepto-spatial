@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="598c57c4-b3bb-4eaf-b0f4-f4cea5a915fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/klepto_spatial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/klepto_spatial.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/make_landscape.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/moran_local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/code_01_test_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/code_01_test_import.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figs/fig_example_moran_local_quadrant.png" beforeDir="false" afterPath="$PROJECT_DIR$/figs/fig_example_moran_local_quadrant.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,9 +67,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2361" y="175" width="1037" height="737" key="SettingsEditor" timestamp="1586801265809">
+    <state x="2361" y="175" width="1037" height="737" key="SettingsEditor" timestamp="1586878899820">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2361" y="175" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586801265809" />
+    <state x="2361" y="175" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586878899820" />
   </component>
 </project>
