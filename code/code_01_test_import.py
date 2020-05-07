@@ -34,7 +34,7 @@ for root, directories, filenames in os.walk(outputFolder):
         imgFiles.append(os.path.join(root, filename))
 
 # filter filenames to match foodlandscape
-imgFiles = list(filter(lambda x: "foodlandscape" in x, imgFiles))
+imgFiles = list(filter(lambda x: "landscape" in x, imgFiles))
 
 
 # function to get image generation and rep number
@@ -46,9 +46,17 @@ def funcImgNames (x):
 
 
 # test one image
-image = imageio.imread(imgFiles[1])[:,:,1]
+resources = imageio.imread(imgFiles[1])[:,:,3]
+# image = np.multiply(image, 500)
 # image = image[100:300, 100:300]
-plt.imshow(image, cmap='magma')
+plt.imshow(resources, cmap='viridis')
+plt.colorbar()
+
+# agents
+foragers = imageio.imread(imgFiles[1])[:,:,2]
+# image = np.multiply(image, 500)
+# image = image[100:300, 100:300]
+plt.imshow(foragers, cmap='cividis')
 plt.colorbar()
 
 import pysal.lib

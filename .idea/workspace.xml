@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="598c57c4-b3bb-4eaf-b0f4-f4cea5a915fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/make_landscape.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/moran_local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/code_01_test_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/code_01_test_import.py" afterDir="false" />
     </list>
@@ -46,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -67,9 +64,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2361" y="175" width="1037" height="737" key="SettingsEditor" timestamp="1586878899820">
+    <state x="737" y="299" width="424" height="523" key="FileChooserDialogImpl" timestamp="1587020262391">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="737" y="299" width="424" height="523" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587020262391" />
+    <state x="2787" y="232" width="1037" height="737" key="SettingsEditor" timestamp="1587987802127">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2361" y="175" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586878899820" />
+    <state x="2787" y="232" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587987802127" />
   </component>
 </project>
