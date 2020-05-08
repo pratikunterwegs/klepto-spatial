@@ -1,6 +1,4 @@
-# Investigating local predictability and shifts in behavioural strategy
-
-<!-- ---
+---
 title: "Investigating feedbacks between behavioural strategies and landscape charactersistics: An Introduction"
 author: Pratik Gupte and Christoph Netz
 date: 8^th^ May, 2020
@@ -14,7 +12,7 @@ csl: "../oikos.csl"
 header-includes:
    - \usepackage{lineno}
    - \setcounter{secnumdepth}{2}
---- -->
+---
 
 \linenumbers
 
