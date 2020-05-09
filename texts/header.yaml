@@ -3,7 +3,7 @@ title: "Investigating feedbacks between behavioural strategies and landscape cha
 author: Pratik Gupte and Christoph Netz
 date: 8^th^ May, 2020
 documentclass: article
-fontfamily: tgtermes
+fontfamily: tgschola
 geometry: margin=1.2in
 table-of-contents: true
 toc-depth: 2
@@ -13,4 +13,3 @@ header-includes:
    - \usepackage{lineno}
    - \setcounter{secnumdepth}{2}
 ---
-`

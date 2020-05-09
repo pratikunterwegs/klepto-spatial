@@ -130,3 +130,9 @@ dmypy.json
 
 # ignore data
 data/
+
+# ignore wiki
+klepto_spatial.wiki
+
+# vscode
+.vscode
