@@ -18,48 +18,6 @@ header-includes:
 
 This document is a brief introduction to the Community Ecology project _Investigating feedbacks between behavioural strategies and landscape charactersistics_.
 
-# Contact
-
-## Who
-
-There are two supervisors, Pratik and Christoph, but this project was born of Pratik's old and failing mind. Contact Pratik for immediate issues with R, Python, git/Github, and/or Peregrine, but get in touch with either/both of us for conceptual issues.
-
-## How
-
-You can contact us by email for now, until we set up a Slack or similar. If you have a preference let us know.
-
-Name|Email
----|---
-Pratik|p.r.gupte@rug.nl
-Christoph|c.f.g.netz@rug.nl
-
-NB: We also have `@student.rug.nl` addresses in the system which we don't use. If you email these addresses, we're never going to know.
-
-## When and why
-
-In general, feel free to contact us when you think it's necessary. We'll get a system set up for contact hours etc. in discussion with you. Below, you can see when we're busy with other meetings.
-
-**NB:** These are difficult times, and we get that. Feel free to contact us if you have an external issue that may impact your participation in the course. You needn't give details, but let us know.
-
-Name|Usually unavailable
----|---
-Pratik|Mondays 11:00 -- 12:00
----|Wednesdays 10:30 -- 12:00
----|Fridays 10:00 -- 12:00
----|All days 18:00 -- 20:00
-Christoph|Wednesdays 10:30 -- 12:00
-
-# Project Description
-
-> Just in case you'd forgotten what you signed up for.
-
-The availability of resources determines the movement and behaviour of individuals on resource landscapes. Simultaneously, individuals deplete resources and thus change the resource landscape they inhabit. The feedback between individuals and resources can have important eco-evolutionary implications, as individuals adapt their behavioural strategies to the resource landscape. This change can itself modify the resource landscape such that it favours a very different behavioural strategy.
-
-Such eco-evolutionary dynamics are difficult to investigate, particularly if there are qualitatively different types of behaviour among individuals. 
-In the Kleptomove simulation model, we have considered two such behaviours: searching for food, or stealing food from other individuals who have already found a food item (‘kleptoparasitism’). The model implements the evolution of the two strategies and the implications for the resource landscape. Though kleptoparasitism always evolves and establishes itself as a common strategy, visual inspection of the simulation results suggests that this only occurs at specifc locations in the resource landscape.
-
-This project will study the correlation between each strategy and the spatial characteristics of the resource landscape, and examine the consequences of the evolution of kleptoparasitism on the resource landscape. The student will use Kleptomove output to identify global ‘tipping points’ in the behavioural strategy, quantify local indicators of spatial association in the landscape at distinct time-points before, during, and following the establishment of kleptoparasitism in the population, and quantify the global change in LISA classes.
-
 # Workflow
 
 ## Reading literature

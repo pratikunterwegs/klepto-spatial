@@ -1,0 +1,16 @@
+---
+title: "Investigating feedbacks between behavioural strategies and landscape charactersistics: An Introduction"
+author: Pratik Gupte and Christoph Netz
+date: 8^th^ May, 2020
+documentclass: article
+fontfamily: tgtermes
+geometry: margin=1.2in
+table-of-contents: true
+toc-depth: 2
+bibliography: "../course-2020-comm-ecol.bib"
+csl: "../chicago-special.csl"
+header-includes:
+   - \usepackage{lineno}
+   - \setcounter{secnumdepth}{2}
+---
+`
