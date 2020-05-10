@@ -1,2 +1,2 @@
-cd klepto_spatial.wiki/
-pandoc Home.md Contact.md Description.md Workflow.md Literature.md ../texts/header.yaml --filter=pandoc-citeproc -s -o ../texts/text-project-intro.pdf
+pandoc klepto_spatial.wiki/Literature.md --bibliography="course-2020-comm-ecol.bib" --csl="chicago-special.csl" -o klepto_spatial.wiki/Literature.rst
+pandoc klepto_spatial.wiki/Home.md klepto_spatial.wiki/Contact.md klepto_spatial.wiki/Description.md klepto_spatial.wiki/Workflow.md klepto_spatial.wiki/Literature.md klepto_spatial.wiki/Kleptomove.md texts/header.yaml --filter=pandoc-citeproc --pdf-engine=xelatex -s -o texts/text-project-intro.pdf
