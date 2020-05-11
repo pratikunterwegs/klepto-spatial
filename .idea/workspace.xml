@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="598c57c4-b3bb-4eaf-b0f4-f4cea5a915fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/klepto_spatial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/klepto_spatial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/code_01_test_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/code_01_test_import.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/helper_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klepto_spatial.wiki/Kleptomove.md" beforeDir="false" afterPath="$PROJECT_DIR$/klepto_spatial.wiki/Kleptomove.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texts/text-project-intro.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/texts/text-project-intro.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +56,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1aO6fDPCkZk97lysPVrJGoMN7bT" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -40,10 +65,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="/usr/local/bin" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -63,14 +90,33 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="737" y="299" width="424" height="523" key="FileChooserDialogImpl" timestamp="1587020262391">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="737" y="299" width="424" height="523" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587020262391" />
-    <state x="2787" y="232" width="1037" height="737" key="SettingsEditor" timestamp="1587987802127">
+    <state x="2657" y="279" width="424" height="523" key="FileChooserDialogImpl" timestamp="1589181028359">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="737" y="299" width="424" height="523" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587020262391" />
+    <state x="2657" y="279" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1589181028359" />
+    <state x="867" y="253" width="1022" height="737" key="SettingsEditor" timestamp="1589202048567">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
     <state x="2787" y="232" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1587987802127" />
+    <state x="867" y="253" width="1022" height="737" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1589202048567" />
+    <state x="2787" y="232" width="1022" height="737" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1589181052797" />
+    <state x="609" y="255" width="700" height="530" key="recent.locations.popup" timestamp="1589191445436">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="609" y="255" width="700" height="530" key="recent.locations.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1589191445436" />
   </component>
 </project>
