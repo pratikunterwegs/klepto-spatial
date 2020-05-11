@@ -45,6 +45,20 @@ def get_lisa_proportions(x):
     for i in np.arange(1, 5):
         x_counts.append(np.count_nonzero(x_sig == i)/x_sig.size)
     return x_counts
+# to do: calculate fragmentation inspired by nelson et al 2008
+# basic: sum of HL and LH as prop landscape in vicinity of significantly dissimilar values
+
+
+# function to return moran local as an array for plotting
+def get_moran_array(x):
+    assert "Moran_Local" in str(type(x)), "input is not a moran local object"
+    values = np.array(x.q)
+    landsize = values.size
+    nrows = int(np.sqrt(landsize))
+    assert nrows % 1 == 0, "input cannot be converted to a square array"
+    # reshape land
+    values = values.reshape(nrows, nrows)
+    return values
 
 
 # ends here
