@@ -28,9 +28,6 @@ def get_moran_local(x):
     landsize = x.size
     assert landsize/nrows == nrows, "input is not square"
     w = pysal.lib.weights.lat2W(nrows, nrows)
-    # x_reshape = x.reshape(landsize*landsize, 1)
-    # z = lag_spatial(w, x_reshape)
-    # z = z.reshape(nrows, nrows)
     moran_local = esda.Moran_Local(x, w, permutations=3)
     return moran_local
 
