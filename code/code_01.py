@@ -54,13 +54,15 @@ for folder in data_folders:  # go through each run folder
 # define a function to count the agents in each layer
 # we also want to know which generation we are dealing with
 def count_agents(landscape_file):
-    generation = int(re.findall(r'\d+', landscape_file)[1])  # get the generation as an integer
+    numbers = re.findall(r'\d+', landscape_file)
+    replicate = int(numbers[0])  # which run is it
+    generation = int(numbers[1])  # get the generation as an integer
     landscape = imageio.imread(landscape_file)
     # get the numbers of klepts, handlers, and foragers
     n_klepts = landscape[:,:,0].sum()
     n_handlers = landscape[:,:,1].sum()
     n_foragers = landscape[:,:,2].sum()
-    return [generation, n_klepts, n_handlers, n_foragers]
+    return [replicate, generation, n_klepts, n_handlers, n_foragers]
 
 
 # map count agents over the folders
