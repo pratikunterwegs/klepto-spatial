@@ -15,7 +15,7 @@ def round_any(value, limit):
 # function to get image generation and rep number
 def get_image_names (x):
     assert "str" in str(type(x)), "input doesn't seem to be a filepath"
-    assert "foodlandscape" in x, "input is not a foodlandscape"
+    assert "landscape" in x, "input is not a foodlandscape"
     names = ((x.split("foodlandscape")[1]).split(".")[0]).split("sim")
     return names
 
