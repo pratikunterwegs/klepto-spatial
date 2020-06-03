@@ -54,9 +54,9 @@ for folder in data_folders:  # go through each run folder
 # define a function to count the agents in each layer
 # we also want to know which generation we are dealing with
 def count_agents(landscape_file):
-    numbers = re.findall(r'\d+', landscape_file)
-    replicate = int(numbers[0])  # which run is it
-    generation = int(numbers[1])  # get the generation as an integer
+    # this uses regex
+    replicate = int(re.findall(r'run_(\d{2})', landscape_file)[0])  # which run is it
+    generation = int(re.findall(r'landscape(\d{5})', landscape_file)[0])  # get the generation as an integer
     landscape = imageio.imread(landscape_file)
     # get the numbers of klepts, handlers, and foragers
     n_klepts = landscape[:,:,0].sum()
@@ -69,18 +69,25 @@ def count_agents(landscape_file):
 list_of_data = []
 for i in list_of_lists_images:
     tmp_list = map(count_agents, i)
-    tmp_data = pd.DataFrame(tmp_list, columns=['gen', 'n_klepts',
+    tmp_data = pd.DataFrame(tmp_list, columns=['rep', 'gen', 'n_klepts',
                                                'n_handlers', 'n_forager'])
     list_of_data.append(tmp_data)
 
 
 # join all the data into a single dataframe
 data = pd.concat(list_of_data)
-data = pd.melt(data, id_vars="gen")
+data = pd.melt(data, id_vars=["gen", "rep"])
 
-# now plot the data
-sns.pointplot('gen', 'value', hue='variable', data=data,
-             palette=['red', 'green', 'blue'],
-              join=False)
+# now plot the data in facets
+plt.rcParams["font.family"] = "Arial"
+fig = sns.FacetGrid(data, col="rep",
+                    hue='variable',
+                    palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'],
+                    col_wrap = 3)
+fig = fig.map(sns.lineplot, "gen", "value",
+               linewidth = 0.5).add_legend()
 
+fig.savefig(fname='figs/fig_example_strategy_per_gen.png',
+            dpi=300,
+            quality=90)
 # ends here
