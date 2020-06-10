@@ -1,4 +1,7 @@
 # some helper functions
+import sys
+import re
+import imageio
 
 if 'pysal' not in sys.modules:
     import pysal.lib
@@ -22,13 +25,15 @@ def get_image_names (x):
 
 # function to calculate the moran local using esda moran local
 # here x is any numpy array
-def get_moran_local(x):
-    assert "Array" in str(type(x)), "input is not an array"
-    nrows = x.shape[1]
-    landsize = x.size
+def get_moran_local(landscape_file):
+    # this uses regex
+    landscape = imageio.imread(landscape_file)[:,:,3]
+    assert "Array" in str(type(landscape)), "input is not an array"
+    nrows = landscape.shape[1]
+    landsize = landscape.size
     assert landsize/nrows == nrows, "input is not square"
     w = pysal.lib.weights.lat2W(nrows, nrows)
-    moran_local = esda.Moran_Local(x, w, permutations=3)
+    moran_local = esda.Moran_Local(landscape, w, permutations=3)
     return moran_local
 
 
