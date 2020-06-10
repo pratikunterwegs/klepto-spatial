@@ -16,6 +16,8 @@ import seaborn as sns  # another plotting library
 import re  # import regular expressions library
 import pandas as pd  # import the dataframes library
 
+from helper_functions import get_moran_local, get_lisa_proportions
+
 # may need to use the tkagg backend on some unix systems
 matplotlib.use("TkAgg")
 
@@ -62,32 +64,45 @@ def count_agents(landscape_file):
     n_klepts = landscape[:,:,0].sum()
     n_handlers = landscape[:,:,1].sum()
     n_foragers = landscape[:,:,2].sum()
-    return [replicate, generation, n_klepts, n_handlers, n_foragers]
+    total = n_klepts+n_foragers+n_handlers
+    return [replicate, generation, n_klepts/total, n_handlers/total, n_foragers/total]
 
 
 # map count agents over the folders
 list_of_data = []
 for i in list_of_lists_images:
-    tmp_list = map(count_agents, i)
-    tmp_data = pd.DataFrame(tmp_list, columns=['rep', 'gen', 'n_klepts',
-                                               'n_handlers', 'n_forager'])
+    tmp_list = list(map(count_agents, i))
+    tmp_moran = list(map(get_moran_local, i))
+    tmp_lisa = list(map(get_lisa_proportions, tmp_moran))
+    tmp_data = list(map(lambda x, y: x + y, tmp_list, tmp_lisa))
     list_of_data.append(tmp_data)
 
 
+# make single df
+data = list(map(lambda x: pd.DataFrame(x, columns=['rep', 'gen', 'p_klepts',
+                                     'p_handlers', 'p_forager',
+                                     'HH', 'LH', 'LL', 'HL']),
+                list_of_data))
+
 # join all the data into a single dataframe
-data = pd.concat(list_of_data)
+data = pd.concat(data)
 data = pd.melt(data, id_vars=["gen", "rep"])
+
+# write data to file
+data.to_csv("data/data_strategy_lisa.csv", index=False)
+
 
 # now plot the data in facets
 plt.rcParams["font.family"] = "Arial"
 fig = sns.FacetGrid(data, col="rep",
                     hue='variable',
-                    palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'],
+                    # palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'],
                     col_wrap = 3)
 fig = fig.map(sns.lineplot, "gen", "value",
-               linewidth = 0.5).add_legend()
+               linewidth = 1).add_legend()
 
 fig.savefig(fname='figs/fig_example_strategy_per_gen.png',
             dpi=300,
             quality=90)
 # ends here
+
