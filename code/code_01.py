@@ -71,6 +71,8 @@ def count_agents(landscape_file):
 # map count agents over the folders
 list_of_data = []
 for i in list_of_lists_images:
+    i = i[0::5]  # operate on every 5th generation
+    print(len(i))
     tmp_list = list(map(count_agents, i))
     tmp_moran = list(map(get_moran_local, i))
     tmp_lisa = list(map(get_lisa_proportions, tmp_moran))
@@ -86,23 +88,47 @@ data = list(map(lambda x: pd.DataFrame(x, columns=['rep', 'gen', 'p_klepts',
 
 # join all the data into a single dataframe
 data = pd.concat(data)
-data = pd.melt(data, id_vars=["gen", "rep"])
+data_pivot = pd.melt(data, id_vars=["gen", "rep"])
+
 
 # write data to file
-data.to_csv("data/data_strategy_lisa.csv", index=False)
+data_pivot.to_csv("data/data_strategy_lisa_generations.csv", index=False)
 
 
-# now plot the data in facets
+# now plot the strategies over the generations in facets
 plt.rcParams["font.family"] = "Arial"
-fig = sns.FacetGrid(data, col="rep",
+fig_strategy_generations = sns.FacetGrid(data_pivot, col="rep",
                     hue='variable',
                     # palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'],
                     col_wrap = 3)
-fig = fig.map(sns.lineplot, "gen", "value",
+fig_strategy_generations = fig_strategy_generations.map(sns.lineplot, "gen", "value",
                linewidth = 1).add_legend()
 
-fig.savefig(fname='figs/fig_example_strategy_per_gen.png',
-            dpi=300,
-            quality=90)
+fig_strategy_generations.savefig(fname='figs/fig_example_strategy_per_gen.png',
+                                 dpi=300,
+                                 quality=90)
+
+# plot the relation between LISA classes and proportion of strategies
+data_landscape_x = pd.melt(data.drop(columns='gen'),
+                           id_vars=['rep', 'HH', 'LH', 'LL', 'HL'],
+                           value_name='p_strategy',
+                           var_name='behav_strategy')
+data_landscape_x = pd.melt(data_landscape_x,
+                           id_vars=['rep', 'p_strategy', 'behav_strategy'],
+                           var_name = 'lisa_class',
+                           value_name = 'p_landscape')
+
+# write data to file
+data_landscape_x.to_csv("data/data_strategy_behaviour_landscape.csv", index=False)
+
+fig_strategy_landscape = sns.FacetGrid(data_landscape_x,
+                                       col="lisa_class", row="behav_strategy",
+                                       hue='behav_strategy')
+fig_strategy_landscape = fig_strategy_landscape.map(sns.scatterplot,
+                                                    'p_landscape', 'p_strategy')
+fig_strategy_landscape.savefig(fname='figs/fig_example_strategy_landscape.png',
+                                 dpi=300,
+                                 quality=90)
+
 # ends here
 
