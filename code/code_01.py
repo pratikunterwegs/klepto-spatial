@@ -123,7 +123,8 @@ data_landscape_x.to_csv("data/data_strategy_behaviour_landscape.csv", index=Fals
 
 fig_strategy_landscape = sns.FacetGrid(data_landscape_x,
                                        col="lisa_class", row="behav_strategy",
-                                       hue='behav_strategy')
+                                       hue='behav_strategy',
+                                       palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'])
 fig_strategy_landscape = fig_strategy_landscape.map(sns.scatterplot,
                                                     'p_landscape', 'p_strategy')
 fig_strategy_landscape.savefig(fname='figs/fig_example_strategy_landscape.png',
