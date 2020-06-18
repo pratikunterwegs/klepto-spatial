@@ -36,7 +36,7 @@ if "data" not in outputFolder:
 
 # gather the folders in the directory avoiding zip files
 data_folders = os.listdir(outputFolder)
-data_folders = list(filter(lambda x: "run" in x and ".zip" not in x, data_folders))
+data_folders = list(filter(lambda x: "landscape" in x and ".zip" not in x, data_folders))
 
 # here we go through all the subfolders in the data folder and
 # list the files in those folders in the order of the generations
@@ -57,8 +57,8 @@ for folder in data_folders:  # go through each run folder
 # we also want to know which generation we are dealing with
 def count_agents(landscape_file):
     # this uses regex
-    replicate = int(re.findall(r'run_(\d{2})', landscape_file)[0])  # which run is it
-    generation = int(re.findall(r'landscape(\d{5})', landscape_file)[0])  # get the generation as an integer
+    replicate = int(re.findall(r'sim(\d{3})', landscape_file)[0])  # which run is it
+    generation = int(re.findall(r'(\d{5})', landscape_file)[0])  # get the generation as an integer
     landscape = imageio.imread(landscape_file)
     # get the numbers of klepts, handlers, and foragers
     n_klepts = landscape[:,:,0].sum()
