@@ -58,7 +58,7 @@ for folder in data_folders:  # go through each run folder
 def count_agents(landscape_file):
     # this uses regex
     replicate = int(re.findall(r'sim(\d{3})', landscape_file)[0])  # which run is it
-    generation = int(re.findall(r'(\d{5})', landscape_file)[0])  # get the generation as an integer
+    generation = int(re.findall(r'\\(\d{5})', landscape_file)[0])  # get the generation as an integer
     landscape = imageio.imread(landscape_file)
     # get the numbers of klepts, handlers, and foragers
     n_klepts = landscape[:,:,0].sum()
@@ -88,19 +88,21 @@ data = list(map(lambda x: pd.DataFrame(x, columns=['rep', 'gen', 'p_klepts',
 
 # join all the data into a single dataframe
 data = pd.concat(data)
+data.gen = pd.Series([item for sublist in [np.arange(0, 1000, 5)]*25 for item in sublist])
 data_pivot = pd.melt(data, id_vars=["gen", "rep"])
 
 
 # write data to file
 data_pivot.to_csv("data/data_strategy_lisa_generations.csv", index=False)
 
-
 # now plot the strategies over the generations in facets
+data_pivot = data_pivot.loc[data_pivot['variable'].isin(['p_klepts', 'p_forager', 'p_handlers', 'LH'])]
+
 plt.rcParams["font.family"] = "Arial"
-fig_strategy_generations = sns.FacetGrid(data_pivot, col="rep",
+fig_strategy_generations = sns.FacetGrid(data_pivot[data_pivot.rep <= 5], col="rep",
                     hue='variable',
-                    # palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'],
-                    col_wrap = 3)
+                    palette=['xkcd:red', 'xkcd:green', 'xkcd:blue', 'xkcd:purple'],
+                    col_wrap = 5)
 fig_strategy_generations = fig_strategy_generations.map(sns.lineplot, "gen", "value",
                linewidth = 1).add_legend()
 
@@ -109,24 +111,24 @@ fig_strategy_generations.savefig(fname='figs/fig_example_strategy_per_gen.png',
                                  quality=90)
 
 # plot the relation between LISA classes and proportion of strategies
-data_landscape_x = pd.melt(data.drop(columns='gen'),
-                           id_vars=['rep', 'HH', 'LH', 'LL', 'HL'],
+data_landscape_x = pd.melt(data.drop(columns=['gen','HH', 'LL', 'HL']),
+                           id_vars=['rep', 'LH'],
                            value_name='p_strategy',
                            var_name='behav_strategy')
-data_landscape_x = pd.melt(data_landscape_x,
-                           id_vars=['rep', 'p_strategy', 'behav_strategy'],
-                           var_name = 'lisa_class',
-                           value_name = 'p_landscape')
+# data_landscape_x = pd.melt(data_landscape_x,
+#                            id_vars=['rep', 'p_strategy', 'behav_strategy'],
+#                            var_name = 'lisa_class',
+#                            value_name = 'p_landscape')
 
 # write data to file
 data_landscape_x.to_csv("data/data_strategy_behaviour_landscape.csv", index=False)
 
-fig_strategy_landscape = sns.FacetGrid(data_landscape_x,
-                                       col="lisa_class", row="behav_strategy",
+fig_strategy_landscape = sns.FacetGrid(data_landscape_x, row="behav_strategy",
                                        hue='behav_strategy',
                                        palette=['xkcd:red', 'xkcd:green', 'xkcd:blue'])
-fig_strategy_landscape = fig_strategy_landscape.map(sns.scatterplot,
-                                                    'p_landscape', 'p_strategy')
+fig_strategy_landscape = fig_strategy_landscape.map(plt.scatter,
+                                                    'LH', 'p_strategy',s=0.1)
+
 fig_strategy_landscape.savefig(fname='figs/fig_example_strategy_landscape.png',
                                  dpi=300,
                                  quality=90)
