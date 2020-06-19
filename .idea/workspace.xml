@@ -22,6 +22,7 @@
     <list default="true" id="598c57c4-b3bb-4eaf-b0f4-f4cea5a915fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/code_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/code_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figs/fig_example_strategy_landscape.png" beforeDir="false" afterPath="$PROJECT_DIR$/figs/fig_example_strategy_landscape.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/figs/fig_example_strategy_per_gen.png" beforeDir="false" afterPath="$PROJECT_DIR$/figs/fig_example_strategy_per_gen.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/code_01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+            <state relative-caret-position="337">
+              <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -56,20 +57,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/helper_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+            <state relative-caret-position="969">
+              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -109,10 +101,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1303" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="55" />
     <option name="y" value="-8" />
-    <option name="width" value="1265" />
+    <option name="width" value="2513" />
     <option name="height" value="1456" />
   </component>
   <component name="ProjectId" id="1aO6fDPCkZk97lysPVrJGoMN7bT" />
@@ -192,7 +184,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1303" y="-8" width="1265" height="1456" extended-state="0" />
+    <frame x="55" y="-8" width="2513" height="1456" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.08646464" />
@@ -208,7 +200,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.40223047" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.40371746" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -269,13 +261,6 @@
     <state x="609" y="255" width="700" height="530" key="recent.locations.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1589191445436" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/make_landscape.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -285,10 +270,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/helper_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+        <state relative-caret-position="969">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
           </folding>
@@ -297,8 +289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/code_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+        <state relative-caret-position="337">
+          <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
         </state>
       </provider>
     </entry>
